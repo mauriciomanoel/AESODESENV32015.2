@@ -1,8 +1,8 @@
 package br.aeso.aula12.exemplo01;
 
 public abstract class Pizza {
-	public static int MARGUERITA = 1;
-	public static int PORTUGUESA = 2;
+	public final static int MARGUERITA = 1;
+	public final static int PORTUGUESA = 2;
 	
     public void fazer() {
         System.out.println("* Pegar massa");
