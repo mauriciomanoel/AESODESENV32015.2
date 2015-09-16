@@ -12,7 +12,7 @@ public class TelaCadastrarCliente {
 
 	public static void main(String[] args) {
 		Fachada fachada = Fachada.getInstance();
-		Cliente cliente = new Cliente("Mauricio Manoel", "913.760.817-76", "Bradesco");
+		Cliente cliente = new Cliente("Mauricio Manoel", "111.111.111-11", "Bradesco");
 		Endereco endereco = new Endereco(cliente, "rua", "numero", "complemento", "bairro", "cidade", "cep");
 		cliente.setEndereco(endereco);
 		try {

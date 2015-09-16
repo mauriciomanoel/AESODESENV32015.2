@@ -14,6 +14,10 @@ public class ConnectionManager {
     		conexao = "jdbc:mysql://localhost/aula11";
     		usuario = "root";
     		senha = "root";
+    	} else if (sistema == Database.NOSQL) {
+    		conexao = "jdbc:mysql://localhost/aula11";
+    		usuario = "root1";
+    		senha = "root1";
     	}
     	else {
     		throw new IllegalArgumentException("Tipo de banco não suportado");

@@ -15,6 +15,9 @@ public class RepositorioClienteBDR implements IRepositorioCliente {
     public RepositorioClienteBDR() {
 		conn = ConnectionManager.getConnection(Database.MYSQL);
     }
+    public RepositorioClienteBDR(int tipoBanco) {
+		conn = ConnectionManager.getConnection(tipoBanco);
+    }
     
 	public void cadastrar(Cliente cliente) throws ClienteJaCadastradoException {
 		// Verifica se o cliente já existe no repositório
