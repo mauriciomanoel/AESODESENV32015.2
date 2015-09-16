@@ -1,6 +1,6 @@
-package br.aeso.aula12.exemplo01;
+package br.aeso.aula12.exemplo04;
 
-public class PizzaPortuguesa extends Pizza{
+public class PizzaPortuguesaCentro extends Pizza {
     public void fazer() {
         super.fazer();
         System.out.println("** Colocar queijo");
@@ -11,4 +11,9 @@ public class PizzaPortuguesa extends Pizza{
     public String tipo() {
     	return "PORTUGUESA";
     }
+    @Override
+	public void preparar() {
+		System.out.println("=== INICIO PREPARACAO PIZZA " 
+				+ this.tipo() + " ===");
+	}
 }
