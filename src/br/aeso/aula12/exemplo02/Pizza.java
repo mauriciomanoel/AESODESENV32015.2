@@ -1,7 +1,7 @@
 package br.aeso.aula12.exemplo02;
 
 public abstract class Pizza {
-	public final static int MARGUERITA = 1;
+	public static final int MARGUERITA = 1;
 	public static final int PORTUGUESA = 2;
 	public static final int FRANGO_CATUPIRY = 3;
 	
