@@ -6,16 +6,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
 @SequenceGenerator(name = "SEQ_CONTAS", sequenceName = "SEQ_CONTAS", initialValue = 1)
 public class Conta {
 
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQ_CONTAS")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQ_CONTAS")
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column (name = "titular")
+	@Column (name = "conta_titular")
 	private String titular;
 	private String banco;
 	private String agencia;

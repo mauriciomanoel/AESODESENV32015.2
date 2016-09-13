@@ -6,7 +6,7 @@ import br.aeso.aula26.jpa.modelo.Conta;
 public class TesteJPA {
 	public static void main(String[] args) {
 		Conta conta = new Conta();
-		conta.setTitular("Maria dos Santos");
+		conta.setTitular("Mauricio");
 		conta.setBanco("Caixa");
 		conta.setAgencia("043");
 		conta.setNumero("54321");

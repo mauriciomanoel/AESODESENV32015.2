@@ -1,4 +1,6 @@
 package br.aeso.aula26.jpa;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -15,18 +17,21 @@ public class TesteJPAConsultar {
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 		// Consulta com Select 
-		//Query query = em.createQuery("select c from Conta c");
-		Query query = em.createQuery("select c from Conta c where c.titular = :pTitular");
-		query.setParameter("pTitular", "Maria dos Santos");
+		Query query = em.createQuery("select c from Conta c");
+		//Query query = em.createQuery("select c from Conta c where c.titular = :pTitular");
+		//query.setParameter("pTitular", "Maria dos Santos");
+		//conta = (Conta) query.getSingleResult();
+		List<Conta> lista = query.getResultList();
 		
 		// Consulta via Hibernate
 		//conta = em.find(Conta.class, 1);
 		
-		conta = (Conta) query.getSingleResult();
-		System.out.println(conta);
+		//conta.setTitular("Mauricio");
+		
+		System.out.println(lista);
 		//conta.setTitular("Mauricio");
 		// Removendo 
-		em.remove(conta);
+		//em.remove(conta);
 		
 		// Confirmando alterações
 		em.getTransaction().commit();
